@@ -2,6 +2,7 @@ import buildlogic.filterEolSimple
 
 plugins {
     `java-library`
+    id("org.gradlex.extra-java-module-info")
     id("testng.java")
     id("testng.testing")
 }
@@ -67,4 +68,12 @@ val transitiveSourcesElements by configurations.creating {
     afterEvaluate {
         sourceSets.main.get().java.srcDirs.forEach { outgoing.artifact(it) }
     }
+}
+
+extraJavaModuleInfo {
+    automaticModule("dom4j-2.1.3.jar", "dom4j2")
+    automaticModule("failureaccess-1.0.1.jar", "failureaccess")
+    automaticModule("j2objc-annotations-1.3.jar", "j2objc.annotations")
+    automaticModule("jcip-annotations-1.0.jar", "jcip.annotations")
+    automaticModule("jsr305-3.0.2.jar", "javax.inject")
 }
