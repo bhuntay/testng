@@ -12,6 +12,7 @@ dependencies {
     implementation(project(":basics"))
     implementation(project(":code-quality"))
     implementation("com.github.vlsi.gradle-extensions:com.github.vlsi.gradle-extensions.gradle.plugin:1.78")
+    implementation("org.gradlex:extra-java-module-info:1.4")
     implementation("org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:1.6.21")
 }
 
